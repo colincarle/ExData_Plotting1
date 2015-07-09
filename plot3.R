@@ -48,7 +48,8 @@ if (flag.delete) unlink(temp.f)
 # open the png device and construct 3 line plots on one set of axes
 png(filename = "plot3.png", width = 480, height = 480)
 with(power.data, {
-    plot(time, Sub_metering_1, type = "l", ylab = "Energy sub metering")
+    plot(time, Sub_metering_1, type = "l",
+         xlab = "", ylab = "Energy sub metering")
     points(time, Sub_metering_2, type = "l", col = "red")
     points(time, Sub_metering_3, type = "l", col = "blue")
     legend("topright",
