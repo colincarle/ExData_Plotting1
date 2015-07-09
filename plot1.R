@@ -26,8 +26,8 @@ data.time.start   <- strptime(paste(as.character(first.5$Date[1]),
 # starting date/time and the target starting/end date/time to calculate:
 # 1) number of lines to skip in the dataset i.e. table.read skip parameter
 # 2) number of lines to read in the dataset i.e. table.read nrows parameter
-target.time.start <- strptime(c("2007-02-01 00:00"), format = "%Y-%m-%d %H:%M")
-target.time.end   <- strptime(c("2007-02-03 00:00"), format = "%Y-%m-%d %H:%M")
+target.time.start <- strptime("2007-02-01 00:00", format = "%Y-%m-%d %H:%M")
+target.time.end   <- strptime("2007-02-03 00:00", format = "%Y-%m-%d %H:%M")
 sample.size       <- as.numeric(difftime(target.time.end, target.time.start,
                                          units = "mins"))
 skip.lines        <- as.numeric(difftime(target.time.start, data.time.start,
