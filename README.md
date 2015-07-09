@@ -1,5 +1,5 @@
-### If you have any questions during peer evaluation, don't hesitate to send me a
-### note at heads.explode@gmail.com
+### If you have any questions during peer evaluation, don't hesitate
+### to send any questions to heads.explode@gmail.com
 
 ## Introduction
 
