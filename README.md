@@ -1,3 +1,6 @@
+### If you have any questions during peer evaluation, don't hesitate to send me a
+### note at heads.explode@gmail.com
+
 ## Introduction
 
 This assignment uses data from
