@@ -42,7 +42,7 @@ names(power.data) <- header
 power.data$time   <- strptime(paste(power.data$Date, power.data$Time),
                               format = "%d/%m/%Y %H:%M")
 
-# remove the temporary file
+# if the file was downloaded (vs. local), delete it.
 if (flag.delete) unlink(temp.f)
 
 # open the png device and construct 4 individual line plots
