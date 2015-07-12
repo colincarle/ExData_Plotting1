@@ -15,7 +15,8 @@ if (!file.exists(temp.f))
 # 3) starting date/time of the dataset
 archive.contents  <- unzip(temp.f, list = TRUE)[[1]]
 first.5           <- read.table(unz(temp.f, archive.contents), header = TRUE,
-                                sep = ';', na.strings = "?", nrows = 5)
+                                sep = ';', na.strings = "?", nrows = 5,
+                                stringsAsFactors = FALSE)
 classes           <- sapply(first.5, class)
 header            <- names(first.5)
 data.time.start   <- strptime(paste(as.character(first.5$Date[1]),
@@ -37,7 +38,7 @@ skip.lines        <- as.numeric(difftime(target.time.start, data.time.start,
 # header, convert the date/time columns to POSIXlt and store in a new column.
 power.data        <- read.table(unz(temp.f, archive.contents), header = TRUE,
                                 sep = ";", na.strings = "?", skip = skip.lines,
-                                nrows = sample.size)
+                                nrows = sample.size, stringsAsFactors = FALSE)
 names(power.data) <- header
 power.data$time   <- strptime(paste(power.data$Date, power.data$Time),
                               format = "%d/%m/%Y %H:%M")
